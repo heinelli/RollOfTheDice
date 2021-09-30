@@ -7,6 +7,8 @@
 Module RollOfTheDice
 
     Sub Main()
+
+
         For i = 0 To 50
             Console.WriteLine(RandomNumber())
         Next
@@ -15,10 +17,12 @@ Module RollOfTheDice
     End Sub
 
     Function RandomNumber()
-        Dim rndNumber As Integer
+        Dim rndNumber1 As Integer
+        Dim rndNumber2 As Integer
         Randomize()
-        rndNumber = Int((11 * Rnd()) + 1)
-        Return rndNumber
+        rndNumber1 = Int((6 * Rnd()) + 1)
+        rndNumber2 = Int((6 * Rnd()) + 1)
+        Return rndNumber1 + rndNumber2
     End Function
 
 End Module
